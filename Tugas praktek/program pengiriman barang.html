@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=prompt("Masukkan nama anda")
+        var b=prompt("Masukkan nama penerima")
+        var c=prompt("Masukkan jarak pengiriman")
+        var d=prompt("Masukkan alamat penerima")
+        var e=prompt("Jenis barang yang mau dikirim?")
+        var f=prompt("Masukkan berat barang yang mau dikirim")
+
+        document.write("Nama pengirim : ", a , "<br/>")
+        document.write("Nama penerima : ", b , "<br/>")
+        document.write("Jarak pengiriman : ", c ,"km<br/>")
+        document.write("Alamat penerima : ", d , "<br/>")
+        document.write("Jenis barang : ", e , "<br/>")
+        document.write("Berat barang : ", f , "kg<br/>")
+
+        var hargac = c * 10000;
+        var x = ""
+        if (hargac >= 50000){
+            x = hargac * 0.1
+        }
+
+        var hargaf = f * 5000;
+        var y = ""
+        if (hargaf >= 100000){
+            y = hargaf * 0.05
+        }
+
+        document.write("harga untuk jarak : ", hargac , "<br/>")
+        document.write("harga untuk berat : ", hargaf , "<br/>")
+        document.write("Biaya pengiriman : ", hargac+hargaf)
+
+    </script>
+</body>
+</html>
