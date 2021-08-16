@@ -8,6 +8,7 @@
 </head>
 <body>
     <script>
+       
         alert("Pengiriman barang")
         var a=prompt("Masukkan nama anda")
         var b=prompt("Masukkan nama penerima")
@@ -18,27 +19,44 @@
 
         document.write("Nama pengirim : ", a , "<br/>")
         document.write("Nama penerima : ", b , "<br/>")
-        document.write("Jarak pengiriman : ", c ,"km<br/>")
         document.write("Alamat penerima : ", d , "<br/>")
         document.write("Jenis barang : ", e , "<br/>")
+        document.write("Jarak pengiriman : ", c ,"km<br/>")
         document.write("Berat barang : ", f , "kg<br/>")
+        
 
-        var hargac = c * 10000;
+
+        var hargac = c * 10000
         var x = ""
         if (hargac >= 50000){
             x = hargac * 0.1
+        }else{
+            x=0
         }
+           
+        
 
-        var hargaf = f * 5000;
+        var hargaf = f * 5000
         var y = ""
         if (hargaf >= 100000){
             y = hargaf * 0.05
+        }else{
+            y=0
         }
+            
+        var cf=hargac-x
+        var fc=hargaf-y
+        var biaya=cf+fc
 
-        document.write("harga untuk jarak : ", hargac , "<br/>")
-        document.write("harga untuk berat : ", hargaf , "<br/>")
-        document.write("Biaya pengiriman : ", hargac+hargaf)
-
+        document.write("Potongan harga jarak pengiriman : Rp ", x , "<br/>")
+        document.write("Potongan harga Berat barang : Rp ", y , "<br/>")
+        document.write("harga untuk jarak : Rp  ", cf , "<br/>")
+        document.write("harga untuk berat : Rp  ", fc , "<br/>")
+        document.write("Biaya pengiriman : Rp  ", biaya , "<br/>")
+      
     </script>
+    
+   
+
 </body>
 </html>
