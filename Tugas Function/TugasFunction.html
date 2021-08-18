@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        alert("Menghitung luas bangun datar :                                                                                     -Persegi -Persegi panjang -Kubus -Jajar genjang")
+        var b = prompt ("Masukkan bangun datar")
+
+        if ( b == "Persegi" || b == "persegi" ){
+            var sp1=prompt("Masukkan sisi ke 1 dari persegi")
+            var sp2=prompt("Masukkan sisi ke 2 dari persegi")
+            function lp(a,b){
+                var hasil_lp = (a*b)
+                return hasil_lp;
+            }
+            var nilai1 = lp( sp1 , sp2 ) 
+            document.write("Bangun datar : ",b,"<br/>")
+            document.write("Sisi ke 1 : ",sp1,"<br/>")
+            document.write("Sisi ke 2 : ",sp2,"<br/>")
+            document.write("Rumus luas persegi : S*S <br/>")
+            document.write("Hasil luas persegi : ",nilai1,"<br/>")
+
+        }else if ( b == "persegi panjang" || b == "Persegi panjang" ){
+            var ppp=prompt("Masukkan panjang dari persegi panjang")
+            var lpp=prompt("Masukkan lebar dari persegi panjang")
+            function llpp(a,b){
+                var hasil_llpp = (a*b)
+                return hasil_llpp;
+            }
+            var nilai2 = llpp( ppp , lpp )
+            document.write("Bangun datar : ",b,"<br/>")
+            document.write("Panjang persegi panjang : ",ppp,"<br/>")
+            document.write("Lebar persegi panjang : ",lpp,"<br/>")
+            document.write("Rumus luas persegi panjang : P*L <br/>")
+            document.write("Hasil luas persegi panjang : ",nilai2,"<br/>")
+
+        }else if ( b == "Kubus" || b == "kubus" ){
+            var sk1=prompt("Masukkan sisi ke 1 kubus")
+            var sk2=prompt("Masukkan sisi ke 2 kubus")
+            function lk(a,b,c){
+                var hasil_lk = (a*b*c)
+                return hasil_lk;
+            }
+            var nilai3 = lk( 6 , sk1 , sk2 )
+            document.write("Bangun datar : ",b,"<br/>")
+            document.write("Sisi ke 1 : ",sk1,"<br/>")
+            document.write("Sisi ke 2 : ",sk2,"<br/>")
+            document.write("Rumus luas Kubus : 6*S*S <br/>")
+            document.write("Hasil luas Kubus : ",nilai3,"<br/>")
+
+        }else if ( b == "Jajar genjang" || b == "jajar genjang" ){
+            var ajg=prompt("Masukkan alas dari jajar genjang")
+            var tjg=prompt("Masukkan tinggi dari jajar genjang")
+            function ljg(a,b){
+                var hasil_ljg = (a*b)
+                return hasil_ljg;
+            }
+            var nilai4 = ljg( ajg , tjg )
+            document.write("Bangun datar : ",b,"<br/>")
+            document.write("Alas jajar genjang : ",ajg,"<br/>")
+            document.write("Tinggi jajar genjang : ",tjg,"<br/>")
+            document.write("Rumus luas jajar genjang : A*T <br/>")
+            document.write("Hasil luas jajar genjang : ",nilai4,"<br/>")
+
+        }else{
+            alert(" Bangun datar tidak tersedia ! ")
+        }
+        
+       
+    </script>
+</body>
+</html>
