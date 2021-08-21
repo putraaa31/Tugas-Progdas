@@ -7,8 +7,7 @@
     <title>Kalkulator</title>
 </head>
 <body>
-    <input type="text" placeholder="Masukkan angka" id="x">
-    <input type="text" placeholder="Masukkan angka" id="y">
+    <input type="number" placeholder="Masukkan angka" id="x">
     <br> <br>
     <button onclick="hitung1()">Tambah [ + ]</button>
     <button onclick="hitung2()">Pengurangan [ - ]</button>
@@ -16,6 +15,8 @@
     <button onclick="hitung4()">Pembagian [ / ]</button>
     <button onclick="hitung5()">Modulus [ % ]</button>
     <br> <br>
+    <input type="number" placeholder="Masukkan angka" id="y">
+    <br> <br> =
     <input type="text" id="z" placeholder="Hasil">
 
     <script>
@@ -63,6 +64,7 @@
             hasil5 = x5 % y5
             document.getElementById("z").value = hasil5
         }
+
     </script>
 </body>
 </html>
