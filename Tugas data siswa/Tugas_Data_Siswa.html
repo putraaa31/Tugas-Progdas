@@ -31,9 +31,24 @@
           <option value="XI">XI</option>
           <option value="XII">XII</option>
         </select>
-
+        <br>
+        <label for="jurusan">Jurusan</label>
+        <select class="form-control" id="txt_jurusan">
+          <option value="RPL">RPL</option>
+          <option value="TKJ">TKJ</option>
+          <option value="MM">MM</option>
+          <option value="BC">BC</option>
+          <option value="TEI">TEI</option>
+        </select>
+        <br>
         <label for="alamat">Alamat</label>
         <textarea class="form-control" id="txt_alamat" rows="3"></textarea>
+        <br>
+        <label for="NoHP">No HP</label>
+        <input type="number" class="form-control" id="txt_nohp" >
+        <br>
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="txt_email" >
 
         <button class="btn btn-primary mt-4" onclick="add()">Simpan</button>
 
@@ -44,7 +59,10 @@
                 <th scope="col">No</th>
                 <th scope="col">Nama</th>
                 <th scope="col">Kelas</th>
+                <th scope="col">Jurusan</th>
                 <th scope="col">Alamat</th>
+                <th scope="col">No HP</th>
+                <th scope="col">Email</th>
                 <th scope="col">Action</th>
               </tr>
             </thead>
@@ -56,9 +74,12 @@
     </div>
     
     <script>
-        var namasiswa = ["gugun","putra"]
-        var kelas = ["X","XI"]
-        var alamat = ["Jakarta","Depok"]
+        var namasiswa = ["putra"]
+        var kelas = ["XI"]
+        var alamat = ["Depok"]
+        var jurusan = ["RPL"]
+        var nohp = ["085692988947"]
+        var email = ["saputra219021@gmail.com"]
 
         var tampil = document.getElementById("tampildata")
 
@@ -72,7 +93,10 @@
                 "<th>"+nodata+"</th>"+
                 "<td>"+namasiswa[i]+"</td>"+
                 "<td>"+kelas[i]+"</td>"+
+                "<td>"+jurusan[i]+"</td>"+
                 "<td>"+alamat[i]+"</td>"+
+                "<td>"+nohp[i]+"</td>"+
+                "<td>"+email[i]+"</td>"+
                 "<td>"+
                     "<button class='btn btn-warning'onclick='edit("+i+")'>Edit</button>"+
                     "<button class='btn btn-danger'onclick='reset("+i+")'>Reset</button>"+
@@ -86,27 +110,57 @@
         function add(){
             var namabaru = document.getElementById("txt_namasiswa").value
             var kelasbaru = document.getElementById("txt_kelas").value
+            var jurusanbaru = document.getElementById("txt_jurusan").value
             var alamatbaru = document.getElementById("txt_alamat").value
-
+            var nohpbaru = document.getElementById("txt_nohp").value
+            var emailbaru = document.getElementById("txt_email").value
+            
             namasiswa.push(namabaru)
             kelas.push(kelasbaru)
+            jurusan.push(jurusanbaru)
             alamat.push(alamatbaru)
+            nohp.push(nohpbaru)
+            email.push(emailbaru)
 
             showData()
         }
         function reset(i){
             var namabaru = document.getElementById("txt_namasiswa").value
             var kelasbaru = document.getElementById("txt_kelas").value
+            var jurusanbaru = document.getElementById("txt_jurusan").value
             var alamatbaru = document.getElementById("txt_alamat").value
-
+            var nohpbaru = document.getElementById("txt_nohp").value
+            var emailbaru = document.getElementById("txt_email").value
+            
             namasiswa.splice(i,1)
             kelas.splice(i,1)
+            jurusan.splice(i,1)
             alamat.splice(i,1)
+            nohp.splice(i,1)
+            email.splice(i,1)
 
             showData()
         }
-        function Edit(){
-            
+        function edit(id){
+          var mengedit = prompt("Mengubah Nama Anda",namasiswa[id])
+          namasiswa[id] = mengedit
+
+          var mengedit = prompt("Mengubah Kelas Anda",kelas[id])
+          kelas[id] = mengedit
+
+          var mengedit = prompt("Mengubah Jurusan Anda",jurusan[id])
+          jurusan[id] = mengedit
+
+          var mengedit = prompt("Mengubah Alamat Anda",alamat[id])
+          alamat[id] = mengedit
+
+          var mengedit = prompt("Mengubah No Hp Anda",nohp[id])
+          nohp[id] = mengedit
+
+          var mengedit = prompt("Mengubah Email Anda",email[id])
+          email[id] = mengedit
+
+          showData()
         }
     </script>
 
