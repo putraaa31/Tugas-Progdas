@@ -70,7 +70,7 @@ var namabuku = ["Matahari","Hujan","Bumi","Selena","Nebula","Pergi","Bintang","B
       }
 
   
-      var nama = []
+        var nama = []
         var nohp = []
         var email = []
         var buku = []
@@ -109,7 +109,7 @@ var namabuku = ["Matahari","Hujan","Bumi","Selena","Nebula","Pergi","Bintang","B
             var emailbaru = document.getElementById("txt_email").value
             var datebaru = document.getElementById("txt_date").value
             var waktubaru = document.getElementById("txt_waktu").value
-            var bukubaru = document.getElementById("listkeranjang")
+            var bukubaru = document.getElementById("listkeranjang").value
 
 
             nama.push(namabaru)

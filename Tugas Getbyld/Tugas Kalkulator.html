@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="number" id="x">
+    <br><br>
+    <select id="a">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <br><br>
+    <input type="number" id="y">
+    <br><br>
+    <button onclick="samadengan()" id="submit">=</button>
+    <br><br>
+    <span id="b"></span>
+
+    <script>
+        var x = document.getElementById("x")
+        var y = document.getElementById("y")
+        var operator = document.getElementById("a")
+        var hasil = document.getElementById("b")
+        var submit = document.getElementById("submit")
+
+        function samadengan(){
+            hasil.innerText = eval(x.value + operator.value + y.value)
+        }
+    </script>
+
+
+</body>
+</html>
